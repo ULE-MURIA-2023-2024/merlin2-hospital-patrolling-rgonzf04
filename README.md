@@ -1,5 +1,15 @@
 # merlin2-hospital-patrolling
 
+En esta práctica, se implementa un nodo de misión para patrullar habitaciones en un hospital. El nodo sigue una máquina de estados finita (FSM) para gestionar la misión, con estados para preparar los objetivos, verificar los objetivos y ejecutar la patrulla. Se definen objetos y proposiciones PDDL para modelar las habitaciones y los puntos de interés. Durante la patrulla, se van visitando las stretcher room indicadas, se da una vuelta/spin en cada una de ellas y se actualizan los objetivos hasta completar la misión.
+
+Aquí hay un vídeo de ejemplo del funcionamiento:
+
+<video width="600" controls>
+  <source src="https://https://github.com/ULE-MURIA-2023-2024/merlin2-hospital-patrolling-rgonzf04/blob/main/video/video.mp4?raw=true" type="video/mp4">
+  Tu navegador no soporta la etiqueta de video.
+</video>
+
+
 La practica está enfocada al desarrollo de comportamientos simples con una arquitectura cognitiva para ROS 2. Para ello, se va a emplear el simulador de un robot móvil y la arquitectura cognitiva MERLIN2 [[1]](#1) que se basa en YASMIN [[2]](#2) y en KANT [[3]](#3).
 
 ## Introducción

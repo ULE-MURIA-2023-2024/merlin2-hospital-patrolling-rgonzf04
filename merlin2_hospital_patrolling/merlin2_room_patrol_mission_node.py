@@ -43,9 +43,9 @@ class MissionNode(Merlin2FsmMissionNode):
 
         self.add_state(
             "EXECUTING_PATROL",
-            CbState([SUCCEED], self.exeute_patrol),
+            CbState([SUCCEED], self.execute_patrol),
             transitions={
-                SUCCEED: "CHECKING GOALS"
+                SUCCEED: "CHECKING_GOALS"
             }
         )
 
@@ -98,7 +98,7 @@ class MissionNode(Merlin2FsmMissionNode):
         
         return self.END
 
-    def exeute_patrol(self, blackboard) -> str:
+    def execute_patrol(self, blackboard) -> str:
         self.execute_goal(blackboard.next_goal)
         return SUCCEED
 
@@ -109,5 +109,5 @@ def main():
     node.join_spin()
     rclpy.shutdown()
 
-if __name__ == "main":
+if __name__ == "__main__":
     main()
